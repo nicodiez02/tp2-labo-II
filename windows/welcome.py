@@ -12,6 +12,13 @@ class PantallaInicio:
         self.boton_rect = pygame.Rect(200, ALTO_VENTANA // 2 - 25, 150, 50)
         self.boton_texto = self.fuente.render("Comenzar partida", True, (255,255,255))
 
+        self.boton_rect = pygame.Rect(
+            ANCHO_VENTANA // 2 - 230 // 2 - 10,  # Puedes ajustar este valor según tus necesidades
+            ALTO_VENTANA // 2 - 25,
+            230 + 20,  # Puedes ajustar este valor según tus necesidades
+            50,
+        )
+
     def manejar_eventos(self, eventos):
         for evento in eventos:
             if evento.type == pygame.QUIT:
